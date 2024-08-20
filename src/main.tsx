@@ -7,7 +7,7 @@ import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate'
 import {  QueryClient, QueryClientProvider } from 'react-query'
 
 const queryClient = new QueryClient({
-  defaultOptions:{
+    defaultOptions:{
     queries:{
       refetchOnWindowFocus: false
     }
