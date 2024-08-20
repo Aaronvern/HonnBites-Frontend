@@ -34,7 +34,7 @@ function MobileNav() {
                 <Button 
                   variant="ghost" 
                   className=" hover:bg-orange-500 flex-1 font-bold text-orange-700 bg-orange-400 mx-10 "
-                  onClick={()=>loginWithRedirect()}
+                  onClick={()=>loginWithRedirect()} 
                   >
                     LOG IN
                 </Button>
