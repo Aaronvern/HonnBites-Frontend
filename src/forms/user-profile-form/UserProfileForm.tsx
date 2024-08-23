@@ -38,7 +38,7 @@ function UserProfileForm({ onSave , isLoading , currentUser } : Props ) {
 
   return (
     <Form {...form} > 
-      <form onSubmit={form.handleSubmit(onSave)} className="space-y-4 bg-gray-100 rounded-lg md:p-10">
+      <form onSubmit={form.handleSubmit(onSave)} className=" space-y-4 bg-gray-100 rounded-lg md:p-10">
         <div>
           <h2 className="text-2xl font-bold">User Profile</h2>
           <FormDescription>

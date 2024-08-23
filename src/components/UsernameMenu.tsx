@@ -24,7 +24,7 @@ export default function UsernameMenu(){
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>
-          <Link to= "/user-profile" className='font-bold text-gray-900 hover:text-orange-600'>
+          <Link to= "/user-profile" className='font-bold ml-2 p-1 text-orange-900 hover:text-orange-600'>
             User Profile
           </Link>          
         </DropdownMenuItem>

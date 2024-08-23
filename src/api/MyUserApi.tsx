@@ -41,10 +41,8 @@ export const useCreateMyUser = ()=>{
   const { getAccessTokenSilently } = useAuth0()
 
   const CreateMyUserRequest = async (user : CreateUserRequest)=>{
-    console.log("MyUserApi.tsx",user)
     try{
       const accessToken = await getAccessTokenSilently()
-      console.log("accesstoken :: ", accessToken)
       const response = await fetch(`${API_BASE_URL}/api/my/user`,{
         method:"Post",
         headers: {
