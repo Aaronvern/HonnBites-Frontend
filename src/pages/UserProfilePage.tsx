@@ -9,6 +9,9 @@ export default function UserProfilePage() {
   if(isGetLoading){
     return <span>Loading...</span>
   }
+  if(!currentUser){
+    return <span className=" font-extrabold text-2xl">Unable to load user profile</span>
+  }
 
-  return <UserProfileForm onSave={updateUser} isLoading={isUpdateLoading}  ></UserProfileForm>
+  return <UserProfileForm currentUser = {currentUser} onSave={updateUser} isLoading={isUpdateLoading}  ></UserProfileForm>
 }
