@@ -10,8 +10,9 @@ function Auth0ProviderWithNavigate({children}: Props) {
     const domain = import.meta.env.VITE_AUTH0_DOMAIN
     const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID
     const redirectUri = import.meta.env.VITE_AUTH0_REDIRECT_URL
+    const audience = import.meta.env.VITE_AUTH0_AUDIENCE
 
-    if(!domain || !clientId || !redirectUri){
+    if(!domain || !clientId || !redirectUri || !audience){
         throw new Error('Missing Auth0 environment variables!! unable to connect to Auth0')
     }
 
@@ -24,7 +25,10 @@ function Auth0ProviderWithNavigate({children}: Props) {
     <Auth0Provider 
         domain={domain} 
         clientId={clientId} 
-        authorizationParams={{ redirect_uri: redirectUri }}
+        authorizationParams={{ 
+            redirect_uri: redirectUri,
+            audience: audience
+         }}
         onRedirectCallback={onRedirectCallback}
     >
         {children}

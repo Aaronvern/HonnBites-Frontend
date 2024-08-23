@@ -4,14 +4,15 @@ import Hero from "@/components/Hero"
 import React from "react"
 
 type Props ={
-    children : React.ReactNode 
+    children : React.ReactNode ,
+    showHero : boolean
 }
 
-const  Layout = ({ children }:Props) => {
+const  Layout = ({ children ,showHero = false }:Props) => {
     return(
         <div className="flex flex-col  min-h-screen">
             <Header/> 
-            <Hero/>
+            {showHero && <Hero/>} 
             <div className=" container py-10 mx-auto flex-1">{children}</div>
             <Footer/>
         </div>
