@@ -23,6 +23,11 @@ export default function UsernameMenu(){
         { user?.name }
       </DropdownMenuTrigger>
       <DropdownMenuContent>
+      <DropdownMenuItem>
+          <Link to= "/manage-restaurant" className='font-bold ml-2 p-1 text-orange-900 hover:text-orange-600'>
+            Manage Restaurant
+          </Link>          
+        </DropdownMenuItem>
         <DropdownMenuItem>
           <Link to= "/user-profile" className='font-bold ml-2 p-1 text-orange-900 hover:text-orange-600'>
             User Profile
