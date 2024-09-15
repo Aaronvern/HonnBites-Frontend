@@ -6,8 +6,10 @@ export default function ProtectedRoute() {
   if (isLoading) {
     return null;
   }
+
   if (isAuthenticated) {
     return <Outlet />;
   }
+
   return <Navigate to="/" replace />;
 }
